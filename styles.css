@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#clock-container {
+    background-color: #fff;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border-radius: 100%;
+    border: solid 5px #202020;
+    filter: drop-shadow(0px 0px 10px #555);
+}
+
+#hoursPointer, #minutesPointer, #secondsPointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+:root {
+    --secondsDeg: 0deg;
+    --minutesDeg: 0deg;
+    --hoursDeg: 0deg;
+}
+
+#hoursPointer {
+    transform: translate(-50%, -100%) rotate(var(--hoursDeg));
+}
+
+#minutesPointer {
+    transform: translate(-50%, -100%) rotate(var(--minutesDeg));
+}
+
+#secondsPointer {
+    transform: translate(-50%, -100%) rotate(var(--secondsDeg));
+}
+
+.hour, .minute, .second {
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.hour {
+    color: #000;
+}
+
+.minute {
+    color: #888;
+}
+
+.second {
+    color: #e03444;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    font-size: 30px;
+    font-family: arial;
+    border-radius: 100px;
+    border: 0px;
+    color: #fff;
+    filter: drop-shadow(0px 0px 5px #555);
+    transition: 0.1s;
+}
+
+.btn:hover {
+    transform: scale(1.050);
+}
+
+.btn:active {
+    transform: scale(0.950);
+}
+
+#startBtn {
+    background-color: #30a444;
+}
+
+#realTimeBtn {
+    background-color: #18a4bc;
+}
+
+#pauseBtn {
+    background-color: #e03444;
+    display: none;
+}
+
+#resumeBtn {
+    background-color: #30a444;
+    display: none;
+}
+
+#resetBtn {
+    background-color: #e03444;
+    display: none;
+}
+
+#slider-container {
+    width: 200px;
+    margin: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#speedSlider {
+    width: 100%;
+    margin: 8px;
+    padding: 2px;
+    direction: rtl;
+    appearance: none;
+    background-color: #cdcdcd;
+    border-radius: 100px;
+}
+
+#label {
+    font-family: arial;
+    font-size: 25px;
+    color: #202020;
+}
+
+#defaultSpeedBtn {
+    font-family: arial;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 100px;
+    transition: 0.1s;
+}
+
+#defaultSpeedBtn:hover {
+    transform: scale(1.050);
+}
+
+#defaultSpeedBtn:active {
+    transform: scale(0.950);
+}
