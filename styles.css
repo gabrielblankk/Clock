@@ -60,14 +60,17 @@ body {
 
 .hour {
     color: #000;
+    transform: rotate(calc(var(--hoursDeg) * -1));
 }
 
 .minute {
     color: #888;
+    transform: rotate(calc(var(--minutesDeg) * -1));
 }
 
 .second {
     color: #e03444;
+    transform: rotate(calc(var(--secondsDeg) * -1));
 }
 
 #buttons-container {
