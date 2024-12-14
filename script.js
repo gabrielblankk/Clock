@@ -112,7 +112,7 @@ function startClock(rt) {
         
         root.style.setProperty('--secondsDeg', `${countSec * 6}deg`)
         root.style.setProperty('--minutesDeg', `${countMin * 6}deg`)
-        root.style.setProperty('--hoursDeg', `${countHour * 15}deg`)
+        root.style.setProperty('--hoursDeg', `${countHour * 30}deg`)
     }, speed)
 }
 
